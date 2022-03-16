@@ -9,6 +9,7 @@ def write_csv(f, line):
     f.write(line[:-1] + "\n")
     lines_written += 1
     if lines_written > 100000:
+		# Backup mechanism
         f.flush()
         lines_written = 0
 
